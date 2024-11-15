@@ -1,7 +1,44 @@
+import React from 'react';
+import { BrowserRouter as Router, useLocation } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { AuthProvider } from './contexts/AuthContext';
+import HeaderWrapper from './components/HeaderWrapper';
+import AppRoutes from './routes/AppRoutes';
+
 
 function App() {
+
+  // const location = useLocation();
+  // const showHeader = location.pathname === '/home' || location.pathname === '/about'
+
+  return (
+    <div>
+      <AuthProvider>
+        <Router>
+
+          {/* <Header /> */}
+          {/* {showHeader && <Header />} */}
+
+          {/* This will help us to conditionally render Header in the pages we want */}
+          <HeaderWrapper />
+
+          {/* All the routes are inside this */}
+          <AppRoutes/>
+
+        </Router>
+      </AuthProvider>
+    </div>
+  )
+
+}
+
+export default App;
+
+
+
+const Default = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,4 +59,3 @@ function App() {
   );
 }
 
-export default App;
