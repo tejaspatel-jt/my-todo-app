@@ -19,8 +19,41 @@ import UserDetails from '../pages/UserDetails';
 import ProductDetails from '../pages/ProductDetails';
 import Products from '../pages/Products';
 import Dashboard from '../pages/Dashboard';
+import  RenderRoutes  from './routes';
 
 const AppRoutes = () => {
+
+    return RenderRoutes();
+
+
+    //   return (
+    //     <Routes>
+    //       <Route path="/*" element={<RenderRoutes routes={ROUTES} />} />
+    //     </Routes>
+    //   );
+
+    //   return (
+    //     <Routes>
+    //       <RenderRoutes routes={ROUTES} />
+    //     </Routes>
+    //   );
+
+
+    // return (
+    //     <Routes>
+    //       {RenderRoutes(ROUTES)}
+    //       {/* <Route path="/" element={<Home />} /> */}
+
+    //     </Routes>
+    //   );
+
+    // return (
+    //     <Routes>
+    //       <RenderRoutes />
+    //     </Routes>
+    //   );
+
+    
     return (
         // <Router>
         <Routes>
