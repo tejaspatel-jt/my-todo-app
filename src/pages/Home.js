@@ -26,6 +26,11 @@ const Home = () => {
     <>
       <h1>Home page</h1>
 
+      <p>
+        <Link to='DataComponent'>Redux-saga API Call </Link>
+      </p>
+
+
       <div>
         <button onClick={goToAbout_replace}>Go to About (replace the history)</button>
       </div>

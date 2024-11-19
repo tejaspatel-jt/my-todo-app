@@ -5,22 +5,28 @@ import { AuthProvider } from './contexts/AuthContext';
 import HeaderWrapper from './components/HeaderWrapper';
 import AppRoutes from './routes/AppRoutes';
 
+// redux things
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 
 function App() {
 
   return (
     <div>
-      <AuthProvider>
-        <Router>
+      <Provider store={store}>
+        <AuthProvider>
+          <Router>
 
-          {/* This will help us to conditionally render Header in the pages we want */}
-          <HeaderWrapper />
+            {/* This will help us to conditionally render Header in the pages we want */}
+            <HeaderWrapper />
 
-          {/* All the routes are inside this */}
-          <AppRoutes/>
+            {/* All the routes are inside this */}
+            <AppRoutes />
 
-        </Router>
-      </AuthProvider>
+          </Router>
+        </AuthProvider>
+      </Provider>
     </div>
   )
 

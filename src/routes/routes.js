@@ -19,6 +19,7 @@ import UserDetails from '../pages/UserDetails';
 import ProductDetails from '../pages/ProductDetails';
 import Products from '../pages/Products';
 import Dashboard from '../pages/Dashboard';
+import DataComponent from '../components/DataComponent';
 
 
 const ROUTES = [
@@ -28,6 +29,7 @@ const ROUTES = [
   { path: "/login", element: <Login /> },
   { path: "/page1", element: <Page1 /> },
   { path: "/page2", element: <Page2 /> },
+  { path: "/DataComponent", element: <DataComponent /> },
   {
       path: "/about",
       element: <About />,
