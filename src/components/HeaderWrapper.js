@@ -4,6 +4,8 @@ import Header from './Header';
 
 const HeaderWrapper = () => {
   const location = useLocation();
+
+  // Include the page here for which you dont want to show the Top Navigation Header
   const pages = ['/page1' , '/page2', '*' , "/about/team" , ];
 
   console.log(location);

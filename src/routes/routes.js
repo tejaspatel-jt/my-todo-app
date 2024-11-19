@@ -1,4 +1,4 @@
-// src/routes.js
+// src/routes/routes.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../pages/Home'; // Import your components
@@ -7,7 +7,7 @@ import Contact from '../pages/Contact';
 import ProtectedRoute from './ProtectedRoute';
 import Todos from '../pages/Todos';
 import Profile from '../pages/Profile';
-import Login from '../Login';
+import Login from '../pages/Login';
 import Header from '../components/Header';
 import Page1 from '../pages/Page1';
 import Page2 from '../pages/Page2';
