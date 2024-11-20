@@ -20,6 +20,7 @@ import ProductDetails from '../pages/ProductDetails';
 import Products from '../pages/Products';
 import Dashboard from '../pages/Dashboard';
 import DataComponent from '../components/DataComponent';
+import TodoComponent from '../pages/TodoComponent';
 
 
 const ROUTES = [
@@ -43,6 +44,7 @@ const ROUTES = [
   { path: "/Products", element: <Products /> },
   { path: "/product/:id", element: <ProductDetails /> },
   { path: "dashboard/*", element: <Dashboard /> },
+  { path: "/todocomp", element: <TodoComponent /> },
   { path: "/todos", element: <ProtectedRoute><Todos /></ProtectedRoute> },
   { path: "/profile", element: <ProtectedRoute><Profile /></ProtectedRoute> }
 ];
