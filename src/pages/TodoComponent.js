@@ -10,7 +10,9 @@ import {
 
 const TodoComponent = () => {
     const dispatch = useDispatch();
-    const todos = useSelector(state => state.data.todos); // Access the todos from the Redux store
+    // const todos = useSelector(state => state.todo) || []; // Access the todos from the Redux store
+    const todos = useSelector(state => state.todo.todos); // Access the todos from the Redux store
+    console.log('tj_ tc todos = ', todos);
     const error = useSelector(state => state.data.error); // Access any error messages from the Redux store
     const [newTodo, setNewTodo] = useState(''); // State for the new todo input
 
@@ -49,8 +51,8 @@ const TodoComponent = () => {
                 placeholder="Add a new todo"
             />
             <button onClick={handleCreateTodo}>Add Todo</button> {/* Button to add a new todo */}
-            <ul>
-                {todos?.map(todo => (
+            <ul style={{ border: '1px solid black' }}>
+                {todos.map(todo => (
                     <li key={todo.id}>
                         {todo.title} {/* Display todo title */}
                         <button onClick={() => handleUpdateTodo(todo.id)}>Edit</button> {/* Button to edit todo */}

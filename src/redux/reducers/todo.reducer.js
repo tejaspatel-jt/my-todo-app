@@ -1,11 +1,15 @@
 // src/redux/reducers/todo.reducer.js
 import { 
+    FETCH_TODOS_REQUEST, 
     FETCH_TODOS_SUCCESS, 
     FETCH_TODOS_FAILURE, 
+    CREATE_TODO_REQUEST, 
     CREATE_TODO_SUCCESS, 
     CREATE_TODO_FAILURE, 
+    UPDATE_TODO_REQUEST, 
     UPDATE_TODO_SUCCESS, 
     UPDATE_TODO_FAILURE, 
+    DELETE_TODO_REQUEST, 
     DELETE_TODO_SUCCESS, 
     DELETE_TODO_FAILURE 
 } from './todo.actions';
@@ -16,10 +20,15 @@ const initialState = {
 };
 
 const todoReducer = (state = initialState, action) => {
+    console.log("hello ",action.payload);
     switch (action.type) {
-        case FETCH_TODOS_SUCCESS:
+        case FETCH_TODOS_REQUEST:
             return {
                 ...state,
+                error: null, // Clear any previous errors when fetching starts
+            };
+        case FETCH_TODOS_SUCCESS:
+            return {
                 todos: action.payload, // Update state with fetched todos
                 error: null, // Clear any previous errors
             };
@@ -27,6 +36,11 @@ const todoReducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload, // Set error message
+            };
+        case CREATE_TODO_REQUEST:
+            return {
+                ...state,
+                error: null, // Clear any previous errors when creating starts
             };
         case CREATE_TODO_SUCCESS:
             return {
@@ -38,6 +52,11 @@ const todoReducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload,
+            };
+        case UPDATE_TODO_REQUEST:
+            return {
+                ...state,
+                error: null, // Clear any previous errors when updating starts
             };
         case UPDATE_TODO_SUCCESS:
             return {
@@ -51,6 +70,11 @@ const todoReducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload,
+            };
+        case DELETE_TODO_REQUEST:
+            return {
+                ...state,
+                error: null, // Clear any previous errors when deleting starts
             };
         case DELETE_TODO_SUCCESS:
             return {
