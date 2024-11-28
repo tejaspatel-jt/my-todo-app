@@ -11,6 +11,7 @@ const api = axios.create({
 
 // API calls
 export const fetchTodos = () => api.get('/todos');
-export const createTodo = (todo) => api.post('/', todo);
-export const updateTodo = (id, todo) => api.put(`/${id}`, todo);
-export const deleteTodo = (id) => api.delete(`/${id}`);
+export const createTodo = (todo) => api.post('/todos', todo);
+export const updateTodo = (id, todo) => api.patch(`/todos/${id}`, todo);
+export const updateTodo_Fully = (todo) => api.put(`/todos/${todo.id}`, todo);
+export const deleteTodo = (id) => api.delete(`/todos/${id}`);

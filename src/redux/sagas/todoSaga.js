@@ -4,6 +4,7 @@ import {
     FETCH_TODOS_REQUEST, 
     CREATE_TODO_REQUEST, 
     UPDATE_TODO_REQUEST, 
+    UPDATE_TODO_REQUEST_FULLY,
     DELETE_TODO_REQUEST, 
     fetchTodosSuccess, 
     fetchTodosFailure, 
@@ -12,7 +13,7 @@ import {
     updateTodoSuccess, 
     updateTodoFailure, 
     deleteTodoSuccess, 
-    deleteTodoFailure 
+    deleteTodoFailure
 } from '../reducers/todo.actions';
 import * as api from '../../api/apiClient'; // Import the API service
 
@@ -47,6 +48,17 @@ function* updateTodo({ payload }) {
     }
 }
 
+// Update Todo Fully
+function* updateTodo_Fully({ payload }) {
+    try {
+        const { id, todo } = payload;
+        const response = yield call(api.updateTodo_Fully,payload); // Call the API service
+        yield put(updateTodoSuccess(response.data)); // Dispatch success action with data
+    } catch (error) {
+        yield put(updateTodoFailure(error.message)); // Dispatch failure action with error
+    }
+}
+
 // Delete Todo
 function* deleteTodo({ payload }) {
     try {
@@ -63,5 +75,6 @@ export function* watchTodos() {
     yield takeEvery(FETCH_TODOS_REQUEST, fetchTodos);
     yield takeEvery(CREATE_TODO_REQUEST, createTodo);
     yield takeEvery(UPDATE_TODO_REQUEST, updateTodo);
+    yield takeEvery(UPDATE_TODO_REQUEST_FULLY, updateTodo_Fully);
     yield takeEvery(DELETE_TODO_REQUEST, deleteTodo);
 }

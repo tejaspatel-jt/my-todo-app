@@ -1,46 +1,86 @@
 {
-    "todos": [
-      {
-        "id": 1,
-        "title": "Buy groceries",
-        "completed": false,
-        "created_at": "2024-11-20T10:00:00Z",
-        "due_date": "2024-11-25T10:00:00Z"
-      },
-      {
-        "id": 2,
-        "title": "Walk the dog",
-        "completed": true,
-        "created_at": "2024-11-21T09:30:00Z",
-        "due_date": "2024-11-22T09:30:00Z"
-      },
-      {
-        "id": 3,
-        "title": "Finish project report",
-        "completed": false,
-        "created_at": "2024-11-21T12:15:00Z",
-        "due_date": "2024-11-30T12:15:00Z"
-      },
-      {
-        "id": 4,
-        "title": "Read a book",
-        "completed": false,
-        "created_at": "2024-11-22T08:00:00Z",
-        "due_date": null
-      },
-      {
-        "id": 5,
-        "title": "Exercise for 30 minutes",
-        "completed": true,
-        "created_at": "2024-11-22T07:45:00Z",
-        "due_date": null
-      },
-      {
-        "id": 6,
-        "title": "Call mom",
-        "completed": false,
-        "created_at": "2024-11-22T08:30:00Z",
-        "due_date": null
-      }
-    ]
+  "todos": [
+    {
+      "id": "1",
+      "title": "Buy groceries updated with patch 2",
+      "completed": false,
+      "created_at": "2024-11-20T10:00:00Z",
+      "due_date": "2024-11-25T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Walk the dog",
+      "completed": true,
+      "created_at": "2024-11-21T09:30:00Z",
+      "due_date": "2024-11-22T09:30:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Finish project report",
+      "completed": false,
+      "created_at": "2024-11-21T12:15:00Z",
+      "due_date": "2024-11-30T12:15:00Z"
+    },
+    {
+      "id": "4",
+      "title": "Read a book",
+      "completed": false,
+      "created_at": "2024-11-22T08:00:00Z",
+      "due_date": null
+    },
+    {
+      "id": "5",
+      "title": "Exercise for 30 minutes",
+      "completed": true,
+      "created_at": "2024-11-22T07:45:00Z",
+      "due_date": null
+    },
+    {
+      "id": "6",
+      "title": "Call mom",
+      "completed": false,
+      "created_at": "2024-11-22T08:30:00Z",
+      "due_date": null
+    },
+    {
+      "id": "1631",
+      "title": "new todo from comonent ",
+      "completed": false
+    },
+    {
+      "id": "518",
+      "title": "with date",
+      "completed": false,
+      "created_at": "2024-11-28T06:16:14.773Z"
+    },
+    {
+      "id": "cedd",
+      "title": "new todo 311pm by tejas",
+      "completed": false,
+      "created_at": "2024-11-28T09:41:07.823Z"
+    },
+    {
+      "id": "8106",
+      "title": "eddfd",
+      "completed": false,
+      "created_at": "2024-11-28T09:41:29.148Z"
+    },
+    {
+      "id": "dd5b",
+      "title": "i am updated fully with Edit Fully",
+      "completed": true,
+      "created_at": "Thu Nov 28 2024",
+      "due_date": "Tue Nov 19 2024"
+    },
+    {
+      "id": "a985",
+      "title": "new song so PLS listen hosana",
+      "completed": true,
+      "created_at": "Thu Nov 28 2024",
+      "created_at2": "Thu, 28 Nov 2024 10:47:56 GMT"
+    }
+  ],
+  "todo": {
+    "test": "test"
   }
+}

@@ -8,6 +8,7 @@ export const CREATE_TODO_SUCCESS = 'CREATE_TODO_SUCCESS';
 export const CREATE_TODO_FAILURE = 'CREATE_TODO_FAILURE';
 
 export const UPDATE_TODO_REQUEST = 'UPDATE_TODO_REQUEST';
+export const UPDATE_TODO_REQUEST_FULLY = 'UPDATE_TODO_REQUEST_FULLY';
 export const UPDATE_TODO_SUCCESS = 'UPDATE_TODO_SUCCESS';
 export const UPDATE_TODO_FAILURE = 'UPDATE_TODO_FAILURE';
 
@@ -25,6 +26,7 @@ export const createTodoSuccess = (data) => ({ type: CREATE_TODO_SUCCESS, payload
 export const createTodoFailure = (error) => ({ type: CREATE_TODO_FAILURE, payload: error });
 
 export const updateTodoRequest = (id, todo) => ({ type: UPDATE_TODO_REQUEST, payload: { id, todo } });
+export const updateTodoRequest_Fully = (todo) => ({ type: UPDATE_TODO_REQUEST_FULLY, payload: todo });
 export const updateTodoSuccess = (data) => ({ type: UPDATE_TODO_SUCCESS, payload: data });
 export const updateTodoFailure = (error) => ({ type: UPDATE_TODO_FAILURE, payload: error });
 
