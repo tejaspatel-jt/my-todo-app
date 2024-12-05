@@ -8,6 +8,7 @@ const Header = () => {
       <ul style={{display : 'flex' , gap : 30,}}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/hooks">Hooks</Link></li>
         <li><Link to="/todocomp">ToDo Cmpnt</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
