@@ -8,6 +8,7 @@ import AppRoutes from './routes/AppRoutes';
 // redux things
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import { HeaderProvider } from './contexts/HeaderContext';
 
 
 function App() {
@@ -16,15 +17,21 @@ function App() {
     <div>
       <Provider store={store}>
         <AuthProvider>
-          <Router>
 
-            {/* This will help us to conditionally render Header in the pages we want */}
-            <HeaderWrapper />
+          <HeaderProvider>
 
-            {/* All the routes are inside this */}
-            <AppRoutes />
+            <Router>
 
-          </Router>
+              {/* This will help us to conditionally render Header in the pages we want */}
+              <HeaderWrapper />
+
+              {/* All the routes are inside this */}
+              <AppRoutes />
+
+            </Router>
+
+          </HeaderProvider>
+          
         </AuthProvider>
       </Provider>
     </div>

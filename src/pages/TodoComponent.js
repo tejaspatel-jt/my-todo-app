@@ -8,8 +8,12 @@ import {
     deleteTodoRequest,
     updateTodoRequest_Fully,
 } from '../redux/reducers/todo.actions';
+import { useHeader } from '../contexts/HeaderContext';
 
 const TodoComponent = () => {
+
+    const { showHeader, hideHeader } = useHeader();
+
     const dispatch = useDispatch();
     // const todos = useSelector(state => state.todo) || []; // Access the todos from the Redux store
     const todos = useSelector(state => state.todo.todos); // Access the todos from the Redux store
@@ -37,9 +41,12 @@ const TodoComponent = () => {
 
     // UPDATE TODO - partially with patch
     const handleUpdateTodo = (id) => {
+        hideHeader(); // Hide the header when updating a todo, and it will be kept hidden until the todo is updated succesfully.
+
         const updatedTodo = prompt('Update todo:', todos.find(todo => todo.id === id)?.title);
         if (updatedTodo) {
             dispatch(updateTodoRequest(id, { title: updatedTodo })); // Dispatch action to update the todo
+            showHeader(); // Show the header again after updating a todo
         }
     };
 
