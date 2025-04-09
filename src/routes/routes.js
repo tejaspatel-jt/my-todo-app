@@ -23,7 +23,27 @@ import DataComponent from '../components/DataComponent';
 import TodoComponent from '../pages/TodoComponent';
 import Hooks from '../pages/Hooks';
 
-
+/**
+ * * Define the routes for the application.
+ * * Each route is an object with a path and an element to render.
+ * * * The routes are organized in a way that allows for nested routes.
+ * * The main routes are defined in the ROUTES array, and nested routes are defined as children of the main routes.
+ * * The RenderRoutes component maps over the ROUTES array and creates a Route for each entry.
+ * * If a route has children, it creates a nested Route for each child.
+ * * The RenderRoutes component is exported as the default export of this module.
+ * 
+ * 
+* * This allows for easy integration into the main application file, where it can be rendered inside a Router component.
+    * * The routes are defined in a way that allows for easy navigation and organization of the application.
+    * * The main routes include a home page, about page, contact page, and various other pages for different functionalities.
+    * * The nested routes allow for a more organized structure, especially for the about page, which has team and company sub-pages.
+    * * The ProtectedRoute component is used to protect certain routes, ensuring that only authenticated users can access them.
+    * * The routes are defined in a way that allows for easy modification and addition of new routes in the future.
+    * * The RenderRoutes component is designed to be reusable and can be easily integrated into any part of the application.
+    * * Overall, this routing structure provides a solid foundation for building a React application with multiple pages and nested routes.
+    * * The routes are defined in a way that allows for easy navigation and organization of the application.
+ * 
+ */
 const ROUTES = [
   { path: "/", element: <Home /> },
   { path: "/*", element: <NotFound /> },

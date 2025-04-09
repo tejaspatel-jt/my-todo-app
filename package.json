@@ -2,6 +2,10 @@
   "name": "my-todo-app",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "github", 
+    "url": "https://github.com/tejaspatel-jt/my-todo-app.git"
+    },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -24,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lds": "cd src/db && json-server db.json --port 3500",
-    "wjs": "cd src/db && json-server --watch db.json --port 3500"
+    "wjs": "cd src/db && json-server --watch db.json --port 3500",
+    "get-repo-url": "git remote get-url origin"
   },
   "eslintConfig": {
     "extends": [

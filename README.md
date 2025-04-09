@@ -1,6 +1,21 @@
 
 
+## Extensions Used 
+1. **Github CoPilot**
+    - help me with code based on context from diff file and create features, It gives code and you cand add and in `Edit` mode, it direcly modify files
+2. **GitHub Copilot Chat**
+    - it comes as free friend along with `Github CoPilot` and helps by suggesting code within file with suggestions and also add better comments for any of the code block so helps us to understand the code which was not written by us too. 
 
+------------------------------------------------------------
+
+### 📌 I am needed if you have >=2 github accounts on your machine 😜 
+```bash
+# Check the Remote Origin First
+git remote show origin
+
+# Then Set the Remote Origin for specific git account
+git remote set-url origin https://tejaspatel-jt@github.com/tejaspatel-jt/my-todo-app.git
+```
 ------------------------------------------------------------
 
 # Getting Started with Create React App
