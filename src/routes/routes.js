@@ -22,6 +22,7 @@ import Dashboard from '../pages/Dashboard';
 import DataComponent from '../components/DataComponent';
 import TodoComponent from '../pages/TodoComponent';
 import Hooks from '../pages/Hooks';
+import TypographyDemo from '../pages/TypographyDemo';
 
 /**
  * * Define the routes for the application.
@@ -46,6 +47,7 @@ import Hooks from '../pages/Hooks';
  */
 const ROUTES = [
   { path: "/", element: <Home /> },
+  { path: "/typographyDemo", element: <TypographyDemo /> },
   { path: "/*", element: <NotFound /> },
   { path: "/contact", element: <Contact /> },
   { path: "/login", element: <Login /> },

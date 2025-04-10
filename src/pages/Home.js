@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, Navigate, NavLink, useNavigate } from 'react-router-dom'
 
+import { Typography, Container, Paper } from '@mui/material';
+
 const Home = () => {
 
   const navigate = useNavigate();
@@ -46,6 +48,17 @@ const Home = () => {
 
       {/* Changes the current location */}
       {/* <Navigate to='contact'  > Go to Contact using Navigate </Navigate> */}
+
+      <Container maxWidth="md" sx={{ mt: 4 }}>
+      <Paper elevation={3} sx={{ p: 3, mt: 3 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Welcome to My Todo App
+        </Typography>
+        <Typography variant="body1">
+          This is a simple todo application built with React and Material-UI.
+        </Typography>
+      </Paper>
+    </Container>
 
 
     </>

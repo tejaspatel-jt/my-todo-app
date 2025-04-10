@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "repository": {
-    "type": "github", 
+    "type": "github",
     "url": "https://github.com/tejaspatel-jt/my-todo-app.git"
-    },
+  },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.1",
     "@reduxjs/toolkit": "^2.3.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -29,7 +33,8 @@
     "eject": "react-scripts eject",
     "lds": "cd src/db && json-server db.json --port 3500",
     "wjs": "cd src/db && json-server --watch db.json --port 3500",
-    "get-repo-url": "git remote get-url origin"
+    "get-repo-url": "git remote get-url origin",
+    "start2": "npm run start && npm run lds"
   },
   "eslintConfig": {
     "extends": [
