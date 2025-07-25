@@ -43,7 +43,7 @@ const TodoComponent = () => {
     const handleUpdateTodo = (id) => {
         hideHeader(); // Hide the header when updating a todo, and it will be kept hidden until the todo is updated succesfully.
 
-        const updatedTodo = prompt('Update todo:', todos.find(todo => todo.id === id)?.title);
+        const updatedTodo = prompt('Update todo:', todos.find(todo => todo.id === id)?.title)
         if (updatedTodo) {
             dispatch(updateTodoRequest(id, { title: updatedTodo })); // Dispatch action to update the todo
             showHeader(); // Show the header again after updating a todo

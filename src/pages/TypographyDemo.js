@@ -3,7 +3,22 @@ import { Typography, Box, TextField, List, ListItem, ListItemText } from '@mui/m
 import { useTheme } from '@mui/material/styles';
 
 const TypographyDemo = () => {
-  const theme = useTheme();
+  //const theme = useTheme();
+  const [theme, toggleTheme] = useThemeToggle();
+
+
+  const [, forceUpdate] = React.useReducer(x => x + 1, 0);
+
+  React.useEffect(() => {
+    if (theme.palette.mode !== 'dark') {
+      console.log('UE mode is not dark, setting it to dark');
+      const timer = setTimeout(() => {
+        theme.palette.mode = 'dark';
+        forceUpdate();
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [theme]);
 
   return (
     <Box sx={{ padding: 3 }}>
